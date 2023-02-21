@@ -11,8 +11,8 @@ import "react-confirm-alert/src/react-confirm-alert.css";
 // Table Header Columns
 const columns = [
   { field: "id", headerName: "ID", width: 230 },
-  { field: "first_name", headerName: "First Name", width: 130 },
-  { field: "last_name", headerName: "Last Name", width: 130 },
+  { field: "Name", headerName: "Name", width: 130 },
+  { field: "Phone", headerName: "Phone", width: 130 },
   {
     field: "age",
     headerName: "Age",
@@ -85,7 +85,7 @@ const UserList = () => {
   const handleDelete = (userId) => {
     const user = userList.filter((u) => userId === u.id)[0];
     confirmAlert({
-      title: `User: ${user.first_name} ${user.last_name}`,
+      title: `User: ${user.name} ${user.phone}`,
       message: "Are you sure to delete the user ?",
       buttons: [
         {
